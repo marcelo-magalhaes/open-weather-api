@@ -1,38 +1,147 @@
 .App {
   text-align: center;
+  background-color: rgb(240,240,240);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .container{
+  width: 100vw;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .container .conteudo{
+  display: flex;
+  width: 100%;
+  height: 73vh;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .container .formulario{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  
+  max-width: 833px;
+}
+
+.App .container .formulario form{
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+}
+
+.App .container .formulario form input{
+  border-radius: 5px;
+  width: 100%;
+  height: 25px;
+}
+
+.App .container .formulario form button{
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.retorno{
+  
+  width: 100%;
+  min-width: 500px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.temperatura{
+  font-weight: bold;
+  font-size: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.infos{
+  font-size: 25px;
+  width: 100%;
+}
+
+.primarias{ 
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.secundarias{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search .ultimas-pesq{
+  height: 50%;
+}
+.search .ultimas-pesq ul{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 25px;
+}
+
+.search .mais-pesquisadas{
+  height:50%;
+}
+
+.search .mais-pesquisadas ul{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 25px;
+}
+
+@media(max-width:1210px){
+  .primarias{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .secundarias{
+    flex-direction: column;
+  }
+
+
+}
+@media(min-width:748px){
+  .formulario{
+    width: 50%;
+    border-right: 2px solid rgb(186,186,186);
+  }
+}
+
+
+@media(max-width:748px){
+  .conteudo{
+    flex-direction: column;
+  }
+
+  
+
+  .search{
+    width: 100%;
   }
 }
