@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto de frontend para API OpenWeather
 
-## Available Scripts
+## Baixando o projeto
 
-In the project directory, you can run:
+Para baixar o projeto, você pode fazer o download através de um arquivo zip, que é encontrado no botão verde escrito clone or download, ou ainda clonar o repositório.
 
-### `yarn start`
+Para clona-lo, clique no mesmo botão verde e copie o link presente na janela que apareceu, agora abra uma sessão do terminal no seu computador e digite:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+$git clone git@github.com:mallssa/open-weather-api.git
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Na sequência, mude para o diretório do projeto, usando:
 
-### `yarn test`
+cd open-weather-api
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Configuração do ambiente
 
-### `yarn build`
+O framework usado para desenvolver o frontend foi o ReactJs
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Na pasta raiz do projeto, digite:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+E o próprio npm irá instalar todas dependências
 
-### `yarn eject`
+## Executando o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para executar o projeto, é necessário de uma chave de API fornecida pela OpenWeather.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O link para acessar o site e se cadastrar é esse: https://openweathermap.org/api
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Após conseguir a chave da api, é necessário criar um arquivo dentro da pasta src, chamado env.js com o seguinte código:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+const CHAVE_API = ###AQUI VAI A SUA CHAVE;
 
-## Learn More
+export default CHAVE_API;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Por fim, basta abrir o terminal na pasta raiz do projeto e executar:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm start ou yarn start
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
