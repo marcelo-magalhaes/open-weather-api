@@ -65,7 +65,6 @@ function App() {
   async function handleEvent(e){
     e.preventDefault();
     if(name!==''){
-      console.log(`${name}`);
       try{
         await api.get(`weather?q=${name}&appid=${CHAVE_API}&lang=pt_br`)
         .then(response => {
@@ -83,7 +82,8 @@ function App() {
           setName('')
         })
       }catch{
-        console.error();
+        alert("Erro ao pesquisar cidade, verifique se a escrita está correta!");
+        setName('');
       }
     }
 
