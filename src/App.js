@@ -68,7 +68,6 @@ function App() {
       try{
         await api.get(`weather?q=${name}&appid=${CHAVE_API}&lang=pt_br`)
         .then(response => {
-          console.log(response.data);
           setCity(response.data.name);
           setTemperatura([converteTemperatura(response.data.main.temp),'ºC']);
           setClima(response.data.weather[0].description);
@@ -78,7 +77,6 @@ function App() {
           setPais(response.data.sys.country);
           verificaUltimasPesquisas();
           RankingMaisPesquisadas();
-          console.log(maisPesquisadas);
           setName('')
         })
       }catch{
